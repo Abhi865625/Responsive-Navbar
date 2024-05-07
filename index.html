@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav-bar">
+      <div class="menu-icon">
+        <img src="/assets/images/menu.png" alt="menu" onclick="toggleMenu()" />
+        <h2>Abhishek</h2>
+      </div>
+
+      <div class="nav-section">
+        <ul>
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>Menu</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Contact us</li></a>
+        </ul>
+      </div>
+    </header>
+    <div id="menu" class="sidebar">
+      <img
+        src="/assets/images/close.png"
+        alt="menu"
+        onclick="toggleMenu(event)"
+      />
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">About</a>
+      <a href="#">Contact us</a>
+    </div>
+  </body>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.left === "0px") {
+        menu.style.left = "-250px";
+      } else {
+        menu.style.left = "0px";
+        event.stopPropagation();
+      }
+    }
+  </script>
+</html>
